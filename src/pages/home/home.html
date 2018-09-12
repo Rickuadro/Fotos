@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      App Camara
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <button ion-button block outline (click)="takePhoto(); agregarFoto()">Tomar foto</button>
+  <p><img src="{{base64Image}}"></p>
+  <button ion-button block outline (click)="menuFotos()" >Ver fotos</button>
+  <ion-list #arriba> 
+    <ion-item *ngFor ="let item of listItems">
+        
+        <button id="buttonList" ion-button block outline (click)="menuDetalle();">{{ item.name }}</button>
+      
+        
+    </ion-item >
+    
+    </ion-list>
+
+</ion-content>
